@@ -26,7 +26,7 @@ const register = async (req, res) => {
               {
                 id: user.id,
               },
-              "cherryblood",
+              proccess.env.key,
               {
                 expiresIn: "30d",
               }
@@ -63,7 +63,7 @@ const login = async (req, res) => {
           {
             id: user.id,
           },
-          "cherryblood",
+          process.env.key,
           {
             expiresIn: "30d",
           }
