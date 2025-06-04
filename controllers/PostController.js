@@ -72,7 +72,7 @@ const create = async (req, res) => {
         setPost(req.userId, post, (err, data) => {
           if (err) {
             console.error("Ошибка:", err);
-            res.json("Ошибка:", err);
+            res.status(500).json({ msg: "Ошибка" });
           } else {
             res.json(data);
           }
