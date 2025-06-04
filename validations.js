@@ -17,5 +17,14 @@ const postCreateValidation = [
   body('type', 'Неверный формат статьи').isString()
 ];
 
+const getInterestingValidation = [
+  body('password', 'Неверный формат пароля').isString(),
+];
 
-module.exports = { loginValidation, postCreateValidation, registerValidation }
+const setInterestingValidation = [
+  body('interests', 'Неверный формат интересов').isArray(),
+  body('password', 'Неверный формат пароля').isString(),
+];
+
+
+module.exports = { loginValidation, postCreateValidation, registerValidation, getInterestingValidation, setInterestingValidation }
